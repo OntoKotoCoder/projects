@@ -1,0 +1,7 @@
+(clear)
+(load "C:/Users/Anton/Dropbox/sudoku_solver/s_main.erl")
+(load "C:/Users/Anton/Dropbox/sudoku_solver/s_solver.erl")
+(load "C:/Users/Anton/Dropbox/sudoku_solver/s_printer.erl")
+(load "C:/Users/Anton/Dropbox/sudoku_solver/s_sudoku.erl")
+(reset)
+(run)
