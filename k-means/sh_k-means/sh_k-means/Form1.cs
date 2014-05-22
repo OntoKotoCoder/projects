@@ -48,6 +48,7 @@ namespace sh_k_means
             clustered_grid.Columns[3].Width = 80; clustered_grid.Columns[4].Width = 80; clustered_grid.Columns[5].Width = 80;
         }
 
+        //Загрузка файла с данными и вывож его в таблицу
         private void data_button_Click(object sender, EventArgs e)
         {
             string filePath = "";
@@ -82,50 +83,20 @@ namespace sh_k_means
 
             Boolean cluster_changed = true;
             Boolean get_new_random = false;
-            Boolean metric_chosen = false;
-            Boolean correct_parametrs = false;
-            Boolean normal_cluster_count = false;
 
-            /*if (cluster_num.Text != "")
-                cluster_count = Convert.ToInt32(cluster_num.Text);
-            int parametrs_count = 0;
-            if (l_petal_check.Checked == true)
-                parametrs_count++;
-            if (l_sepal_check.Checked == true)
-                parametrs_count++;
-            if (w_petal_check.Checked == true)
-                parametrs_count++;
-            if (w_sepal_check.Checked == true)
-                parametrs_count++;
-            if (l_petal_check.Checked == false && l_sepal_check.Checked == false
-                && w_petal_check.Checked == false && w_sepal_check.Checked == false || parametrs_count == 1)
-                correct_parametrs = false;
-            else
-                correct_parametrs = true;
-            if (Manhattan_check.Checked == true || Euclidean_check.Checked == true)
-                metric_chosen = true;
-            if (cluster_count >= 2 && cluster_count <= 150)
-                normal_cluster_count = true;
-            if (correct_parametrs == false)
-                MessageBox.Show("Вы должны выбрать минимум два праметра для кластеризации!");
-            if (data_load == false)
-                MessageBox.Show("Данные не загружены! Нажмите кнопку \"Исходные данные\"");
-            if (metric_chosen == false)
-                MessageBox.Show("Метрика не выбрана! Задайте одну из двух метрик");
-            if (normal_cluster_count == false)
-                MessageBox.Show("Число кластеров должно быть больше 2-ух, но меньше 150!");
-            
-            if (normal_cluster_count && metric_chosen && correct_parametrs && data_load)*/
             if (check_entered_data())
             {
-                seeds = new int[cluster_count];
+                seeds = new int[cluster_count];             //сюда запишем начальные экземпляры
 
                 Random new_seed = new Random();
-                centroids = new double[cluster_count, 4];
+                centroids = new double[cluster_count, 4];   //а сюда будем записывать центроиды
                 int current_cluster;
+
+                //Генерируем начальные экземпляры для кластеризации
                 for (int i = 0; i < cluster_count; i++)     //генерируем n случайных значний, n - число кластеров
                 {
-                    do {                                    //цикл do будет генерировать не повторяющиеся начальные центроиды
+                    //цикл do будет генерировать не повторяющиеся начальные центроиды
+                    do {                                    
                         seeds[i] = new_seed.Next(1, 151);
                         if (i > 0)
                         {
@@ -151,6 +122,8 @@ namespace sh_k_means
                 {
                     change_cluster[i] = true;
                 }
+                //==========================Начали кластеризовывать============================
+                //Цкил do будет работать до тех пор, пока элементы не перестанут менят кластеры.
                 do
                 {
                     iteration_count++;
@@ -201,6 +174,9 @@ namespace sh_k_means
                     }                   
                     new_centroid();
                 } while (cluster_changed == true);
+                //==========================Закончили кластеризовывать============================
+                //
+                //Вывод откластеризованных данных в таблицу
                 for (int i = 1; i <= 150; i++)
                 {
                     clustered_grid.Rows.Add();
