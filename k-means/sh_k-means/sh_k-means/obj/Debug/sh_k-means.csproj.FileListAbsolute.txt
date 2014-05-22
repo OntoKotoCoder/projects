@@ -1,0 +1,10 @@
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\bin\Debug\sh_k-means.exe.config
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\bin\Debug\sh_k-means.exe
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\bin\Debug\sh_k-means.pdb
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\obj\Debug\sh_k-means.csprojResolveAssemblyReference.cache
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\obj\Debug\sh_k_means.Properties.Resources.resources
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\obj\Debug\sh_k-means.csproj.GenerateResource.Cache
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\obj\Debug\sh_k-means.exe
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\obj\Debug\sh_k-means.pdb
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\obj\Debug\sh_k_means.Form1.resources
+C:\Users\Anton\Dropbox\github\k-means\sh_k-means\sh_k-means\obj\Debug\sh_k_means.Form2.resources
